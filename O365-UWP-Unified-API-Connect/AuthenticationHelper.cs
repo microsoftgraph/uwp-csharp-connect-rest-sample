@@ -71,7 +71,7 @@ namespace O365_UWP_Unified_API_Connect
 
                 // Ensure that the saved account works for getting the token we need
                 WebTokenRequestResult webTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(webTokenRequest, userAccount);
-                if (webTokenRequestResult.ResponseStatus == WebTokenRequestStatus.Success)
+                if (webTokenRequestResult.ResponseStatus == WebTokenRequestStatus.Success || webTokenRequestResult.ResponseStatus == WebTokenRequestStatus.AccountSwitch)
                 {
                     WebTokenResponse webTokenResponse = webTokenRequestResult.ResponseData[0];
                     userAccount = webTokenResponse.WebAccount;
