@@ -1,4 +1,4 @@
-# Office 365 Profile sample for Windows
+# Office 365 Connect Sample for UWP Using Unified API (Preview)
 
 **Table of contents**
 
