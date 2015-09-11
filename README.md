@@ -36,9 +36,9 @@ Before you can register the application in the Azure portal, you need to find ou
 2. Make sure that your Platform Target is set to x86 or x64.
 3. Open the `AuthorizationHelper.cs` file.
 4. Find this line of code, uncomment it, and set a breakpoint on it.
-```C#
-string URI = string.Format("ms-appx-web://Microsoft.AAD.BrokerPlugIn/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host.ToUpper());
-```
+
+        string URI = string.Format("ms-appx-web://Microsoft.AAD.BrokerPlugIn/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host.ToUpper());
+
 5. Press F5.
 6. After the app launches, press the **Connect** button in the app.
 7. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it aside for the next step.
