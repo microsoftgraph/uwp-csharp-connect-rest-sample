@@ -36,7 +36,6 @@ Before you can register the application in the Azure portal, you need to find ou
 2. Make sure that your Platform Target is set to x86 or x64.
 3. Open the `AuthorizationHelper.cs` file.
 4. Find this line of code, uncomment it, and set a breakpoint on it.
-
 ```C#
 string URI = string.Format("ms-appx-web://Microsoft.AAD.BrokerPlugIn/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host.ToUpper());
 ```
