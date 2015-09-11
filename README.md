@@ -32,7 +32,7 @@ This sample requires the following:
 
 Before you can register the application in the Azure portal, you need to find out the application's redirect URI.  Windows 10 provides each application with a unique URI and ensures that messages sent to that URI are only sent to that application.  To determine the redirect URI for your project:
 
-1. Open the solution in Visual Studio 2015.
+1. Open the solution in Visual Studio 2015. Make sure that your Platform Target is set to x86 or x64.
 2. Open the `AuthorizationHelper.cs` file.
 3. Find this line of code, uncomment it, and set a breakpoint on it.
 
