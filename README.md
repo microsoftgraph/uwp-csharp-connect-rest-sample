@@ -32,18 +32,19 @@ This sample requires the following:
 
 Before you can register the application in the Azure portal, you need to find out the application's redirect URI.  Windows 10 provides each application with a unique URI and ensures that messages sent to that URI are only sent to that application.  To determine the redirect URI for your project:
 
-1. Open the solution in Visual Studio 2015. Make sure that your Platform Target is set to x86 or x64.
-2. Open the `AuthorizationHelper.cs` file.
-3. Find this line of code, uncomment it, and set a breakpoint on it.
+1. Open the solution in Visual Studio 2015. 
+2. Make sure that your Platform Target is set to x86 or x64.
+3. Open the `AuthorizationHelper.cs` file.
+4. Find this line of code, uncomment it, and set a breakpoint on it.
 
 ```C#
 string URI = string.Format("ms-appx-web://Microsoft.AAD.BrokerPlugIn/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host.ToUpper());
 ```
 
-4. Press F5.
-5. After the app launches, press the **Connect** button in the app.
-6. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it aside for the next step.
-7. Stop debugging, and clear the breakpoint.
+5. Press F5.
+6. After the app launches, press the **Connect** button in the app.
+7. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it aside for the next step.
+8. Stop debugging, and clear the breakpoint.
 
 The redirectURI value will look something like this:
 
