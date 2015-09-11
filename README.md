@@ -41,7 +41,7 @@ string URI = string.Format("ms-appx-web://Microsoft.AAD.BrokerPlugIn/{0}", WebAu
 ```
 
 4. Press F5.
-5. After the app launches, press the *Connect* button in the app.
+5. After the app launches, press the **Connect** button in the app.
 6. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it aside for the next step.
 7. Stop debugging, and clear the breakpoint.
 
