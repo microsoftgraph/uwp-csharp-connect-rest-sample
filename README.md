@@ -81,7 +81,7 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 <a name="questions"></a>
 ## Questions and comments
 
-We'd love to get your feedback on the O365 UWP unified APIConnect project. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/O365-Win-Profile/issues) section of this repository.
+We'd love to get your feedback on the O365 UWP unified APIConnect project. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect/issues) section of this repository.
 
 Questions about Office 365 development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Make sure that your questions or comments are tagged with [Office365] and [API].
 
