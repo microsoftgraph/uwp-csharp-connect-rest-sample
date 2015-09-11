@@ -39,7 +39,6 @@ Before you can register the application in the Azure portal, you need to find ou
 ```C#
 string URI = string.Format("ms-appx-web://Microsoft.AAD.BrokerPlugIn/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host.ToUpper());
 ```
-
 5. Press F5.
 6. After the app launches, press the **Connect** button in the app.
 7. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it aside for the next step.
@@ -99,4 +98,5 @@ Questions about Office 365 development in general should be posted to [Stack Ove
 
 ## Copyright
 Copyright (c) 2015 Microsoft. All rights reserved.
+
 
