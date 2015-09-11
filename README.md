@@ -70,7 +70,7 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 <a name="build"></a>
 ## Build and debug ##
 
-**Note:** If you see any errors while installing packages during step 3 (for example, *Unable to find "Microsoft.IdentityModel.Clients.ActiveDirectory"*) make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
+**Note:** If you see any errors while installing packages during step 2 make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
 1. After you've loaded the solution in Visual Studio, configure the sample to use the client id that you registered in Azure Active directory and the domain of your tenant by adding the corresponding values for these keys in the Application.Resources node of the App.xaml file.
 ![Office 365 UWP unified API connect sample](/readme-images/ClientTenant.png "Client ID value in App.xaml file")`
