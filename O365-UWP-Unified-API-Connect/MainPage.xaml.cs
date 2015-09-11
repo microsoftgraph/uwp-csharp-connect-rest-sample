@@ -45,7 +45,6 @@ namespace O365_UWP_Unified_API_Connect
             if (!App.Current.Resources.ContainsKey("ida:ClientID"))
             {
                 WelcomeText.Text = "Oops - App not registered with Office 365. To run this sample, you must register it with Office 365. You can do that through the 'Add | Connected services' dialog in Visual Studio. See Readme for more info";
-                ConnectButton.IsEnabled = false;
             }
         }
 
