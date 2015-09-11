@@ -41,7 +41,7 @@ Before you can register the application in the Azure portal, you need to find ou
 
 5. Press F5.
 6. After the app launches, press the **Connect** button in the app.
-7. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it aside for the next step.
+7. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it for the next step.
 8. Stop debugging, and clear the breakpoint.
 
 The redirectURI value will look something like this:
