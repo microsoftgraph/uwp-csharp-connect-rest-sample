@@ -20,12 +20,11 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="appTitle" Text="Office 365 Connect Sample"
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="appTitle" Text="Office 365 unified API Connect Sample"
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Top" 
                        TextWrapping="Wrap"
                        FontSize="40"
-                        
                        />
         <ProgressBar x:Name="ProgressBar" Width="900" 
                      Visibility="Collapsed"
@@ -36,6 +35,12 @@
         <TextBox Grid.Row="3" Grid.Column="0" x:Name="EmailAddressBox" HorizontalAlignment="Center"  TextWrapping="Wrap" PlaceholderText="email address" IsEnabled="False" Width="240" Height="30" />
 
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Copy"  Label="copy redirect URI" Click="CopyRedirectUriToClipboard_Click"/>
+        </CommandBar>
+
+    </Page.BottomAppBar>
 </Page>
 <!--
 O365-UWP-Unified-API-Connect, https://github.com/OfficeDev/O365-UWP-Unified-API-Connect
