@@ -15,12 +15,6 @@ namespace O365_UWP_Unified_API_Connect
 {
     internal static class AuthenticationHelper
     {
-
-        // Windows10 universal apps require redirect URI in the format below. Add a breakpoint to this line and run the app before you register it, so that
-        // you can supply the correct redirect URI value.
-        //private static Uri _returnUri = new Uri(string.Format("ms-appx-web://microsoft.aad.brokerplugin/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host).ToUpper());
-
-        //
         // The Client ID is used by the application to uniquely identify itself to Azure AD.
         static string clientId = App.Current.Resources["ida:ClientID"].ToString();
 
@@ -137,6 +131,12 @@ namespace O365_UWP_Unified_API_Connect
 
         }
 
+        public static string GetAppRedirectURI()
+        {
+            // Windows10 universal apps require redirect URI in the format below. Add a breakpoint to this line and run the app before you register it, so that
+            // you can supply the correct redirect URI value.
+            return string.Format("ms-appx-web://microsoft.aad.brokerplugin/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host).ToUpper();
+        }
 
     }
 }

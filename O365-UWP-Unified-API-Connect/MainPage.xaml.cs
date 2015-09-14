@@ -133,6 +133,20 @@ namespace O365_UWP_Unified_API_Connect
             var rl = ResourceLoader.GetForCurrentView();
             return String.Format(rl.GetString("MailContents"), userName);
         }
+
+        private async void CopyRedirectUriToClipboard_Click(object sender, RoutedEventArgs e)
+        {
+            var redirectURI = AuthenticationHelper.GetAppRedirectURI();
+
+            var dataPackage = new Windows.ApplicationModel.DataTransfer.DataPackage();
+            dataPackage.SetText(redirectURI);
+            Windows.ApplicationModel.DataTransfer.Clipboard.SetContent(dataPackage);
+            Windows.ApplicationModel.DataTransfer.Clipboard.Flush();
+
+            var dialog = new Windows.UI.Popups.MessageDialog(redirectURI , "App Redirect URI copied to clipboard");
+            await dialog.ShowAsync();
+
+        }
     }
 }
 
