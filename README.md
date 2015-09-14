@@ -34,21 +34,14 @@ Before you can register the application in the Azure portal, you need to find ou
 
 1. Open the solution in Visual Studio 2015. 
 2. Make sure that your Platform Target is set to x86 or x64.
-3. Open the `AuthorizationHelper.cs` file.
-4. Find this line of code, uncomment it, and set a breakpoint on it.
-
-        string URI = string.Format("ms-appx-web://Microsoft.AAD.BrokerPlugIn/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host.ToUpper());
-
-5. Press F5.
-6. After the app launches, press the **Connect** button in the app.
-7. When the breakpoint is hit, use the debugger to determine the value of redirectURI, and copy it for the next step.
-8. Stop debugging, and clear the breakpoint.
-
+3. Press F5.
+4. After the app launches, press the **Copy** button in the menu on the bottom of the app. This will copy the redirect URI for the app to the clipboard. 
 The redirectURI value will look something like this:
 
 ```
 ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-3898041910-4166806349-50292026-2305040851
 ```
+5. Store this value. You will use it when registering the app, as described in the following section. 
 
 
 <a name="register"></a>
