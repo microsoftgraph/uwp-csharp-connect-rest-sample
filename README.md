@@ -36,12 +36,13 @@ Before you can register the application in the Azure portal, you need to find ou
 2. Make sure that your Platform Target is set to x86 or x64.
 3. Press F5.
 4. After the app launches, press the **Copy** button in the menu on the bottom of the app. This will copy the redirect URI for the app to the clipboard. 
-The redirectURI value will look something like this:
+5. Store this value. You will use it when registering the app, as described in the following section. 
 
+
+The redirect URI value will look something like this:
 ```
 ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-3898041910-4166806349-50292026-2305040851
 ```
-5. Store this value. You will use it when registering the app, as described in the following section. 
 
 
 <a name="register"></a>
@@ -52,7 +53,7 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 3.	On the top menu, click **Applications**.
 4.	Click **Add** from the bottom menu.
 5.	On the **What do you want to do page**, click **Add an application my organization is developing**.
-6.	On the **Tell us about your application page**, specify **O365-Win-Profile** for the application name and select **NATIVE CLIENT APPLICATION** for type.
+6.	On the **Tell us about your application page**, select **NATIVE CLIENT APPLICATION** for type and specify a name for the app, for example **O365-UWP-Connect**.
 7.	Click the arrow icon on the bottom-right corner of the page.
 8.	On the **Application information** page, enter the redirect URI value that you obtained during the previous step.
 9.	Once the application has been successfully added, you will be taken to the **Quick Start** page for the application. From here, select **Configure** in the top menu.
