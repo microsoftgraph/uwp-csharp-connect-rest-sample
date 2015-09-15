@@ -49,8 +49,16 @@ namespace O365_UWP_Unified_API_Connect
                 var token = await AuthenticationHelper.GetTokenHelperAsync();
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
 
-                //Build contents of post body and convert to StringContent object.
-                string postBody = "{'Message':{ 'Body':{ 'Content': '" + bodyContent + "','ContentType':'HTML'},'Subject':'" + subject + "','ToRecipients':[" + recipientsJSON +  "]},'SaveToSentItems':true}";
+                // Build contents of post body and convert to StringContent object.
+                // Using line breaks for readability.
+                string postBody = "{'Message':{" 
+                    +  "'Body':{ " 
+                    + "'Content': '" + bodyContent + "'," 
+                    + "'ContentType':'HTML'}," 
+                    + "'Subject':'" + subject + "'," 
+                    + "'ToRecipients':[" + recipientsJSON +  "]}," 
+                    + "'SaveToSentItems':true}";
+
                 var emailBody = new StringContent(postBody, System.Text.Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = await client.PostAsync(new Uri("https://graph.microsoft.com/beta/me/Microsoft.Graph.SendMail"), emailBody);
