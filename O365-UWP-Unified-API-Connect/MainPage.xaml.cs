@@ -118,7 +118,7 @@ namespace O365_UWP_Unified_API_Connect
         }
 
         // <summary>
-        // Personalizes the e-mail.
+        // Personalizes the email.
         // </summary>
         public static string ComposePersonalizedMail(string userName)
         {

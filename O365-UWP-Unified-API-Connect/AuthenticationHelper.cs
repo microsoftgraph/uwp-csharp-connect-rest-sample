@@ -15,17 +15,17 @@ namespace O365_UWP_Unified_API_Connect
 {
     internal static class AuthenticationHelper
     {
-        // The Client ID is used by the application to uniquely identify itself to Azure AD.
+        // The Client ID is used by the application to uniquely identify itself to Microsoft Azure Active Directory (AD).
         static string clientId = App.Current.Resources["ida:ClientID"].ToString();
 
         // You'll create your tenant-specific authority from the tenant domain and AADInstance URI
         static string tenant = App.Current.Resources["ida:Domain"].ToString();
         static string AADInstance = App.Current.Resources["ida:AADInstance"].ToString();
 
-        //Use the domain-specific authority when you're authentication users from a single tenant only.
+        //Use the domain-specific authority when you're authenticating users from a single tenant only.
         static string authority = AADInstance + tenant;
 
-        //Use "organizations" as your authority when you want the app to work on any Azure AD Tenant.
+        //Use "organizations" as your authority when you want the app to work on any Azure Tenant.
         //static string authority = "organizations";
 
         // To authenticate to the Unified API, the client needs to know its App ID URI.
@@ -74,7 +74,7 @@ namespace O365_UWP_Unified_API_Connect
                 }
                 else
                 {
-                    // The saved account could not be used for getitng a token
+                    // The saved account could not be used for getting a token
                     // Make sure that the UX is ready for a new sign in
                     SignOut();
                 }
@@ -133,7 +133,7 @@ namespace O365_UWP_Unified_API_Connect
 
         public static string GetAppRedirectURI()
         {
-            // Windows10 universal apps require redirect URI in the format below. Add a breakpoint to this line and run the app before you register it, so that
+            // Windows 10 universal apps require redirect URI in the format below. Add a breakpoint to this line and run the app before you register it, so that
             // you can supply the correct redirect URI value.
             return string.Format("ms-appx-web://microsoft.aad.brokerplugin/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host).ToUpper();
         }

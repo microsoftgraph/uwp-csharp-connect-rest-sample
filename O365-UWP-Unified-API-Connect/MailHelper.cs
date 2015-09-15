@@ -18,7 +18,7 @@ namespace O365_UWP_Unified_API_Connect
         /// </summary>
         /// <param name="subject">The subject line of the email.</param>
         /// <param name="bodyContent">The body of the email.</param>
-        /// <param name="recipients">A semicolon separated list of email addresses.</param>
+        /// <param name="recipients">A semicolon-separated list of email addresses.</param>
         /// <returns></returns>
         internal async Task ComposeAndSendMailAsync(string subject,
                                                             string bodyContent,
