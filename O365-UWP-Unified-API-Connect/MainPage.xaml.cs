@@ -43,11 +43,13 @@ namespace O365_UWP_Unified_API_Connect
             // Developer code - if you haven't registered the app yet, we warn you. 
             if (!App.Current.Resources.ContainsKey("ida:ClientID"))
             {
-                InfoText.Text = "Oops - App not registered with Office 365. To run this sample, you must register it with Office 365. See Readme for more info";
+                InfoText.Text = ResourceLoader.GetForCurrentView().GetString("NoClientIdMessage");
+                ConnectButton.IsEnabled = false;
             }
             else
             {
                 InfoText.Text = ResourceLoader.GetForCurrentView().GetString("ConnectPrompt");
+                ConnectButton.IsEnabled = true;
             }
         }
 

@@ -119,8 +119,7 @@
   </resheader>
   <data name="AuthenticationErrorMessage" xml:space="preserve">
     <value>Oops!
-
-This sample couldn't connect to Office 365. Check your debug output for errors.</value>
+We couldn't connect to Office 365. Check your debug output for errors.</value>
   </data>
   <data name="ConnectPrompt" xml:space="preserve">
     <value>Tap the following button to connect to Office 365.</value>
@@ -168,10 +167,13 @@ log an issue&lt;/a&gt; on our repository. &lt;/p&gt;
   <data name="MailErrorMessage" xml:space="preserve">
     <value>Oops!
 
-This sample couldn't send mail. Check your debug output for errors.</value>
+We couldn't send an mail. Check your debug output for errors.</value>
   </data>
   <data name="MailSubject" xml:space="preserve">
     <value>Hi from the Office 365 Connect sample.</value>
+  </data>
+  <data name="NoClientIdMessage" xml:space="preserve">
+    <value>Oops - It looks like this app is not registered with Office 365, because we don't see a client id in App.xaml.  To run this sample, register it with Office 365. See Readme for more info.</value>
   </data>
   <data name="SendMailPrompt" xml:space="preserve">
     <value>You're now connected to Office 365. Tap "send mail" to send a message from your account using the Office 365 unified API.</value>
