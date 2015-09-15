@@ -31,7 +31,6 @@ namespace O365_UWP_Unified_API_Connect
         private string _mailAddress;
         private string _displayName = null;
         private MailHelper _mailHelper = new MailHelper();
-        private bool _userLoggedIn = false;
         public static ApplicationDataContainer _settings = ApplicationData.Current.RoamingSettings;
 
         public MainPage()
@@ -44,7 +43,11 @@ namespace O365_UWP_Unified_API_Connect
             // Developer code - if you haven't registered the app yet, we warn you. 
             if (!App.Current.Resources.ContainsKey("ida:ClientID"))
             {
-                WelcomeText.Text = "Oops - App not registered with Office 365. To run this sample, you must register it with Office 365. See Readme for more info";
+                InfoText.Text = "Oops - App not registered with Office 365. To run this sample, you must register it with Office 365. See Readme for more info";
+            }
+            else
+            {
+                InfoText.Text = ResourceLoader.GetForCurrentView().GetString("ConnectPrompt");
             }
         }
 
@@ -52,56 +55,40 @@ namespace O365_UWP_Unified_API_Connect
         /// Signs in the current user.
         /// </summary>
         /// <returns></returns>
-        public async Task SignInCurrentUserAsync()
+        public async Task<bool> SignInCurrentUserAsync()
         {
             var token = await AuthenticationHelper.GetTokenHelperAsync();
 
             if (token != null)
             {
-                _userLoggedIn = true;
                 string userId = (string)_settings.Values["userID"];
                 _mailAddress = (string)_settings.Values["userEmail"];
                 _displayName = (string)_settings.Values["userName"];
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
         }
 
 
-        //Toggle button for logging user in and out.
         private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
-            var rl = ResourceLoader.GetForCurrentView();
-            if (!_userLoggedIn)
-            {
-                WelcomeText.Text = "acquiring token...";
-                ProgressBar.Visibility = Visibility.Visible;
-                await SignInCurrentUserAsync();
-                if (!String.IsNullOrEmpty(_displayName))
-                {
-                    WelcomeText.Text = "Hi " + _displayName + "," + Environment.NewLine + rl.GetString("WelcomeMessage");
-                    MailButton.IsEnabled = true;
-                    EmailAddressBox.IsEnabled = true;
-                    _userLoggedIn = true;
-                    ConnectButton.Content = "disconnect";
-                    EmailAddressBox.Text = _mailAddress;
-                }
-                else
-                {
-                    WelcomeText.Text = rl.GetString("AuthenticationErrorMessage");
-                }
+            ProgressBar.Visibility = Visibility.Visible;
+            if (await SignInCurrentUserAsync())
+            { 
+                InfoText.Text = "Hi " + _displayName + "," + Environment.NewLine + ResourceLoader.GetForCurrentView().GetString("SendMailPrompt");
+                MailButton.IsEnabled = true;
+                EmailAddressBox.IsEnabled = true;
+                ConnectButton.Visibility = Visibility.Collapsed;
+                DisconnectButton.Visibility = Visibility.Visible;
+                EmailAddressBox.Text = _mailAddress;
             }
             else
             {
-                ProgressBar.Visibility = Visibility.Visible;
-                AuthenticationHelper.SignOut();
-                WelcomeText.Text = "";
-                ProgressBar.Visibility = Visibility.Collapsed;
-                MailButton.IsEnabled = false;
-                EmailAddressBox.IsEnabled = false;
-                _userLoggedIn = false;
-                ConnectButton.Content = "connect";
-                this._displayName = null;
-                this._mailAddress = null;
+                InfoText.Text = ResourceLoader.GetForCurrentView().GetString("AuthenticationErrorMessage");
             }
 
             ProgressBar.Visibility = Visibility.Collapsed;
@@ -109,20 +96,23 @@ namespace O365_UWP_Unified_API_Connect
 
         private async void MailButton_Click(object sender, RoutedEventArgs e)
         {
-            var rl = ResourceLoader.GetForCurrentView();
             _mailAddress = EmailAddressBox.Text;
-            WelcomeText.Text = "sending mail...";
             ProgressBar.Visibility = Visibility.Visible;
+            MailStatus.Text = string.Empty;
             try
             {
-                await _mailHelper.ComposeAndSendMailAsync(rl.GetString("MailSubject"), ComposePersonalizedMail(_displayName), _mailAddress);
-                WelcomeText.Text = "mail sent";
+                await _mailHelper.ComposeAndSendMailAsync(ResourceLoader.GetForCurrentView().GetString("MailSubject"), ComposePersonalizedMail(_displayName), _mailAddress);
+                MailStatus.Text = string.Format(ResourceLoader.GetForCurrentView().GetString("SendMailSuccess"), _mailAddress);
             }
             catch (Exception)
             {
-                WelcomeText.Text = rl.GetString("MailErrorMessage");
+                MailStatus.Text = ResourceLoader.GetForCurrentView().GetString("MailErrorMessage");
             }
-            ProgressBar.Visibility = Visibility.Collapsed;
+            finally
+            {
+                ProgressBar.Visibility = Visibility.Collapsed;
+            }
+            
         }
 
         // <summary>
@@ -130,8 +120,7 @@ namespace O365_UWP_Unified_API_Connect
         // </summary>
         public static string ComposePersonalizedMail(string userName)
         {
-            var rl = ResourceLoader.GetForCurrentView();
-            return String.Format(rl.GetString("MailContents"), userName);
+            return String.Format(ResourceLoader.GetForCurrentView().GetString("MailContents"), userName);
         }
 
         private async void CopyRedirectUriToClipboard_Click(object sender, RoutedEventArgs e)
@@ -146,6 +135,19 @@ namespace O365_UWP_Unified_API_Connect
             var dialog = new Windows.UI.Popups.MessageDialog(redirectURI , "App Redirect URI copied to clipboard");
             await dialog.ShowAsync();
 
+        }
+
+        private void Disconnect_Click(object sender, RoutedEventArgs e)
+        {
+            ProgressBar.Visibility = Visibility.Visible;
+            AuthenticationHelper.SignOut();
+            ProgressBar.Visibility = Visibility.Collapsed;
+            MailButton.IsEnabled = false;
+            EmailAddressBox.IsEnabled = false;
+            ConnectButton.Visibility = Visibility.Visible;
+            InfoText.Text = ResourceLoader.GetForCurrentView().GetString("ConnectPrompt");
+            this._displayName = null;
+            this._mailAddress = null;
         }
     }
 }

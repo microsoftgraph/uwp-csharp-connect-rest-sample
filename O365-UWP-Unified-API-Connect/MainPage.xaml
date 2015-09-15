@@ -8,39 +8,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="appTitle" Text="Office 365 unified API Connect Sample"
-                       HorizontalAlignment="Center" 
-                       VerticalAlignment="Top" 
-                       TextWrapping="Wrap"
-                       FontSize="40"
-                       />
-        <ProgressBar x:Name="ProgressBar" Width="900" 
-                     Visibility="Collapsed"
-                     Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom"  IsIndeterminate="True"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" x:Name="WelcomeText" VerticalAlignment="Center" HorizontalAlignment="Left" TextAlignment="Center" FontSize="20" TextWrapping="Wrap"  Width="350"/>
-        <Button Grid.Row="1" Grid.Column="0" x:Name="ConnectButton" HorizontalAlignment="Center" Content="connect" Click="ConnectButton_Click" Height="80" Width="200"/>
-        <Button Grid.Row="2" Grid.Column="0" x:Name="MailButton" Content="send mail" IsEnabled="False" HorizontalAlignment="Center" Click="MailButton_Click" Height="80"   Width="200"/>
-        <TextBox Grid.Row="3" Grid.Column="0" x:Name="EmailAddressBox" HorizontalAlignment="Center"  TextWrapping="Wrap" PlaceholderText="email address" IsEnabled="False" Width="240" Height="30" />
+        <ProgressBar x:Name="ProgressBar" Visibility="Collapsed" Grid.Row="0" Grid.ColumnSpan="3" IsIndeterminate="True" Margin="0,10"/>
+        <TextBlock Grid.Row="1" Grid.Column="1"  x:Name="InfoText" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="{ThemeResource TextStyleLargeFontSize}" TextWrapping="Wrap" Width="750" Margin="0,10"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="ConnectButton"  Content="connect"  Click="ConnectButton_Click" Margin="200,20,0,20"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10">
+            <TextBox x:Name="EmailAddressBox" AcceptsReturn="False" Height="{Binding  ActualHeight, ElementName=MailButton}" IsEnabled="False" Width="380"/>
+            <Button  x:Name="MailButton" Content="send mail" IsEnabled="False" HorizontalAlignment="Center" Click="MailButton_Click" Margin="21,0,0,0"/>
+        </StackPanel>
+        <TextBlock Grid.Row="4" Grid.Column="1" x:Name="MailStatus" HorizontalAlignment="Left"  TextWrapping="Wrap"  Margin="0,10"/>
 
     </Grid>
-    <Page.BottomAppBar>
-        <CommandBar>
-            <AppBarButton Icon="Copy"  Label="copy redirect URI" Click="CopyRedirectUriToClipboard_Click"/>
+    <Page.TopAppBar>
+        <CommandBar >
+            <CommandBar.Content>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="appTitle" Text="Office 365 unified API Connect Sample"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       TextWrapping="Wrap"
+                       FontSize="{ThemeResource TextStyleExtraLargeFontSize}" Margin="40,0,0,0"
+                       />
+                
+            </CommandBar.Content>
+            <AppBarButton Icon="Cancel" Label="disconnect" Visibility="Collapsed" Click="Disconnect_Click" x:Name="DisconnectButton"/>
+            <AppBarButton Icon="Copy"  Label="copy redirect URI" Click="CopyRedirectUriToClipboard_Click" />
         </CommandBar>
-
-    </Page.BottomAppBar>
+    </Page.TopAppBar>
 </Page>
 <!--
 O365-UWP-Unified-API-Connect, https://github.com/OfficeDev/O365-UWP-Unified-API-Connect

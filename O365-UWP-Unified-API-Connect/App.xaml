@@ -8,15 +8,11 @@
     RequestedTheme="Light">
 
     <Application.Resources>
-        <SolidColorBrush x:Key="SampleHeaderBrush" Color="#007ACC" />
-        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#1799F0" />
-        <x:String x:Key="ProgressBarIndeterminateForegroundThemeBrush">White</x:String>
-        <!-- Add your client id here. -->
-        <x:String x:Key="ida:ClientID"></x:String>
+
+        <x:String x:Key="ida:ClientID">bb583705-4646-499d-ade5-6fa530adb077</x:String>
         <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
         <!-- Add your developer tenant domain here. -->
-        <x:String x:Key="ida:Domain">yourtenant.onmicrosoft.com</x:String>
-
+        <x:String x:Key="ida:Domain">patsoldemo6.onmicrosoft.com</x:String>
     </Application.Resources>
 
 
