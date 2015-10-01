@@ -15,6 +15,9 @@
 
 This sample shows how to connect your Windows 10 Universal app to Office 365 using the preview unified API to send an email. It also uses the new Windows 10 [WebAccountManager API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) to authenticate users in your tenant.
 
+> Note: To understand the code for calling the Office 365 unified API in a UWP app, see [Understanding Connect code sample] (https://github.com/OfficeDev/O365-UWP-Unified-API-Connect/wiki).
+
+
 <a name="prerequisites"></a>
 ## Prerequisites ##
 
