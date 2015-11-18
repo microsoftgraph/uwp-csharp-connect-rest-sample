@@ -36,7 +36,7 @@
     <Page.TopAppBar>
         <CommandBar >
             <CommandBar.Content>
-                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="appTitle" Text="Office 365 unified API Connect Sample"
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="appTitle" Text="Office 365 Microsoft Graph Sample"
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center" 
                        TextWrapping="Wrap"
