@@ -28,7 +28,7 @@ namespace O365_UWP_Unified_API_Connect
         //Use "organizations" as your authority when you want the app to work on any Azure Tenant.
         //static string authority = "organizations";
 
-        // To authenticate to the Unified API, the client needs to know its App ID URI.
+        // To authenticate to Microsoft Graph, the client needs to know its App ID URI.
         public const string ResourceUrl = "https://graph.microsoft.com/";
 
         private static WebAccountProvider aadAccountProvider = null;

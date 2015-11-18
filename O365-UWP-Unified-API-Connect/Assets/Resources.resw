@@ -176,7 +176,7 @@ We couldn't send an mail. Check your debug output for errors.</value>
     <value>Oops - It looks like this app is not registered with Office 365, because we don't see a client id in App.xaml.  To run this sample, register it with Office 365. See Readme for more info.</value>
   </data>
   <data name="SendMailPrompt" xml:space="preserve">
-    <value>You're now connected to Office 365. Tap "send mail" to send a message from your account using the Office 365 unified API.</value>
+    <value>You're now connected to Microsoft Graph. Tap "send mail" to send a message from your account using Microsoft Graph.</value>
   </data>
   <data name="SendMailSuccess" xml:space="preserve">
     <value>We successfully  sent an email to {0} !</value>
