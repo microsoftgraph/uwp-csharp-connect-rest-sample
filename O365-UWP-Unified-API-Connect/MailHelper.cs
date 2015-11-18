@@ -61,7 +61,7 @@ namespace O365_UWP_Unified_API_Connect
 
                 var emailBody = new StringContent(postBody, System.Text.Encoding.UTF8, "application/json");
 
-                HttpResponseMessage response = await client.PostAsync(new Uri("https://graph.microsoft.com/beta/me/SendMail"), emailBody);
+                HttpResponseMessage response = await client.PostAsync(new Uri("https://graph.microsoft.com/v1.0/me/microsoft.graph.SendMail"), emailBody);
 
                 if ( !response.IsSuccessStatusCode)
                 {
@@ -81,7 +81,7 @@ namespace O365_UWP_Unified_API_Connect
 }
 //********************************************************* 
 // 
-//O365-UWP-Unified-API-Connect, https://github.com/OfficeDev/O365-UWP-Unified-API-Connect
+//O365-UWP-Microsoft-Graph-Connect, https://github.com/OfficeDev/O365-UWP-Microsoft-Graph-Connect
 //
 //Copyright (c) Microsoft Corporation
 //All rights reserved. 

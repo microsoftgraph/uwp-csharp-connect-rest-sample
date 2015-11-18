@@ -1,4 +1,4 @@
-# Office 365 Connect Sample for UWP Using Unified API (Preview)
+# Office 365 Connect Sample for UWP Using Microsoft Graph
 
 **Table of contents**
 
@@ -13,18 +13,20 @@
 <a name="introduction"></a>
 ##Introduction
 
-This sample shows how to connect your Windows 10 Universal app to Office 365 using the preview unified API to send an email. It also uses the new Windows 10 [WebAccountManager API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) to authenticate users in your tenant.
+This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API (previously called Office 365 unified API) to send an email. It also uses the new Windows 10 [WebAccountManager API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) to authenticate users in your tenant.
 
-> Note: To understand the code for calling the Office 365 unified API in a UWP app, see [Understanding the Connect code sample] (https://github.com/OfficeDev/O365-UWP-Unified-API-Connect/wiki).
+> Note: To understand the code for calling Microsoft Graph in a UWP app, see [Understanding the Connect code sample] (https://github.com/OfficeDev/O365-UWP-Microsoft-Graph-Connect/wiki).
 
 
 <a name="prerequisites"></a>
 ## Prerequisites ##
 
+**Note:** Try out the [Get started with Office 365 APIs](http://dev.office.com/getting-started/office365apis?platform=option-windowsuniversal#setup) page, which simplifies registration so you can get this sample running faster.
+
 This sample requires the following:  
-  * Visual Studio 2015  
-  * Windows 10 Tools for Visual Studio
-  * Windows 10 (development mode enabled)
+
+  * Visual Studio 2015 
+  * Windows 10 ([development mode enabled](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx))
   * An Office 365 for business account. You can sign up for [an Office 365 Developer subscription](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment#bk_Office365Account) that includes the resources that you need to start building Office 365 apps.
   * A Microsoft Azure tenant to register your application. Azure Active Directory (AD) provides identity services that applications use for authentication and authorization. A trial subscription can be acquired here: [Microsoft Azure](http://aka.ms/jjm0q7).
 
@@ -60,7 +62,7 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 7.	Click the arrow icon on the lower-right corner of the page.
 8.	On the **Application information** page, enter the redirect URI value that you obtained during the previous step.
 9.	Once the application is successfully added, you'll be taken to the **Quick Start** page for the application. From there, select **Configure** in the top menu.
-10.	Under **permissions to other applications**, select **Add application**. In the dialog box, select the **Office 365 unified API (preview)** application. After you return to the application configuration page, select the **Send mail as signed-in user** permission.
+10.	Under **permissions to other applications**, select **Add application**. In the dialog box, select the **Microsoft Graph API** application. After you return to the application configuration page, select the **Send mail as signed-in user** and **Sign in and read user profile** permissions.
 11.	Copy the value specified for **Client ID** on the **Configure** page.
 12.	Click **Save** in the bottom menu.
 
@@ -70,7 +72,7 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 **Note:** If you see any errors while installing packages during step 2, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
 1. After you've loaded the solution in Visual Studio, configure the sample to use the client id that you registered in Azure Active Directory and the domain of your tenant by adding the corresponding values for these keys in the Application.Resources node of the App.xaml file.
-![Office 365 UWP unified API connect sample](/readme-images/ClientTenant.png "Client ID value in App.xaml file")`
+![Office 365 UWP Microsoft Graph connect sample](/readme-images/ClientTenant.png "Client ID value in App.xaml file")`
 
 2. Press F5 to build and debug. Run the solution and sign in to Office 365 with your organizational account.
 
@@ -78,7 +80,7 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 <a name="questions"></a>
 ## Questions and comments
 
-We'd love to get your feedback about the O365 UWP unified API Connect project. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect/issues) section of this repository.
+We'd love to get your feedback about the UWP Microsoft Graph Connect project. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/O365-UWP-Microsoft-Graph-Connect/issues) section of this repository.
 
 Questions about Office 365 development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Make sure that your questions or comments are tagged with [Office365] and [API].
 
@@ -86,7 +88,7 @@ Questions about Office 365 development in general should be posted to [Stack Ove
 ## Additional resources ##
 
 - [Other Office 365 Connect samples](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-Connect)
-- [Office 365 unified API overview (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview)
+- [Microsoft Graph overview](http://graph.microsoft.io)
 - [Office 365 APIs platform overview](https://msdn.microsoft.com/office/office365/howto/platform-development-overview)
 - [Office 365 API code samples and videos](https://msdn.microsoft.com/office/office365/howto/starter-projects-and-code-samples)
 - [Office developer code samples](http://dev.office.com/code-samples)
