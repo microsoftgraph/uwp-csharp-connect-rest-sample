@@ -76,6 +76,12 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 
 2. Press F5 to build and debug. Run the solution and sign in to Office 365 with your organizational account.
 
+<a name="contributing"></a>
+## Contributing ##
+
+If you'd like to contribute to this sample, see [CONTRIBUTING.MD](/CONTRIBUTING.md).
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 <a name="questions"></a>
 ## Questions and comments
@@ -93,7 +99,6 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 - [Office 365 API code samples and videos](https://msdn.microsoft.com/office/office365/howto/starter-projects-and-code-samples)
 - [Office developer code samples](http://dev.office.com/code-samples)
 - [Office dev center](http://dev.office.com/)
-
 
 ## Copyright
 Copyright (c) 2015 Microsoft. All rights reserved.
