@@ -82,6 +82,6 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 - [Office dev center](http://dev.office.com/)
 
 ## Copyright
-Copyright (c) 2015 Microsoft. All rights reserved.
+Copyright (c) 2016 Microsoft. All rights reserved.
 
 
