@@ -59,7 +59,7 @@ namespace O365_UWP_Unified_API_Connect
         /// <returns></returns>
         public async Task<bool> SignInCurrentUserAsync()
         {
-            var token = await AuthenticationHelper.GetTokenHelperAsync();
+            var token = await AuthenticationHelper.GetTokenForUserAsync();
 
             if (token != null)
             {
@@ -123,20 +123,6 @@ namespace O365_UWP_Unified_API_Connect
         public static string ComposePersonalizedMail(string userName)
         {
             return String.Format(ResourceLoader.GetForCurrentView().GetString("MailContents"), userName);
-        }
-
-        private async void CopyRedirectUriToClipboard_Click(object sender, RoutedEventArgs e)
-        {
-            var redirectURI = AuthenticationHelper.GetAppRedirectURI();
-
-            var dataPackage = new Windows.ApplicationModel.DataTransfer.DataPackage();
-            dataPackage.SetText(redirectURI);
-            Windows.ApplicationModel.DataTransfer.Clipboard.SetContent(dataPackage);
-            Windows.ApplicationModel.DataTransfer.Clipboard.Flush();
-
-            var dialog = new Windows.UI.Popups.MessageDialog(redirectURI , "App Redirect URI copied to clipboard");
-            await dialog.ShowAsync();
-
         }
 
         private void Disconnect_Click(object sender, RoutedEventArgs e)

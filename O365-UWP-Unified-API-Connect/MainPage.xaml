@@ -45,7 +45,6 @@
                 
             </CommandBar.Content>
             <AppBarButton Icon="Cancel" Label="disconnect" Visibility="Collapsed" Click="Disconnect_Click" x:Name="DisconnectButton"/>
-            <AppBarButton Icon="Copy"  Label="copy redirect URI" Click="CopyRedirectUriToClipboard_Click" />
         </CommandBar>
     </Page.TopAppBar>
 </Page>
