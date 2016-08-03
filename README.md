@@ -12,7 +12,7 @@
 <a name="introduction"></a>
 ##Introduction
 
-This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API to send an email. It also uses the new Windows 10 [WebAccountManager API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) to authenticate users in your tenant.
+This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API to send an email. The sample uses the v2.0 authentication endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
 
 > Note: To understand the code for calling Microsoft Graph in a UWP app, see [Call Microsoft Graph in a universal Windows 10 app] (https://graph.microsoft.io/docs/platform/uwp).
 
