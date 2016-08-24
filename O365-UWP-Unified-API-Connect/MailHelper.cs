@@ -46,7 +46,7 @@ namespace O365_UWP_Unified_API_Connect
             {
 
                 HttpClient client = new HttpClient();
-                var token = await AuthenticationHelper.GetTokenHelperAsync();
+                var token = await AuthenticationHelper.GetTokenForUserAsync();
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
 
                 // Build contents of post body and convert to StringContent object.
