@@ -1,4 +1,4 @@
-# Office 365 Connect Sample for UWP Using Microsoft Graph
+# Microsoft Graph Connect Sample for UWP (REST)
 
 **Table of contents**
 
