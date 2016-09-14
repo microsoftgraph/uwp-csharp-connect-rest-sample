@@ -1,0 +1,14 @@
+﻿<Application
+    x:Class="Graph_UWP_Connect_REST.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Graph_UWP_Connect_REST"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <!-- Add your client id here. -->
+        <x:String x:Key="ida:ClientID">ENTER_YOUR_CLIENT_ID</x:String>
+        <x:String x:Key="ida:ReturnUrl">ENTER_YOUR_REDIRECT_URI</x:String>
+    </Application.Resources>
+
+</Application>
