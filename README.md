@@ -43,7 +43,7 @@ This sample requires the following:
  
 4. Under **Platforms**, select **Add platform**.
 5. Select **Mobile platform**.
-6. Copy both the Client Id (App Id) and Redirect URI values to the clipboard. You'll need to enter these values into the sample app.
+6. Copy both the Application Id (App Id) and Redirect URI values to the clipboard. You'll need to enter these values into the sample app.
 
 	The app id is a unique identifier for your app. The redirect URI is a unique URI provided by Windows 10 for each application to ensure that messages sent to that URI are only sent to that application. 
 
@@ -56,7 +56,7 @@ This sample requires the following:
 **Note:** If you see any errors while installing packages during step 2, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
 
-1. After you've loaded the solution in Visual Studio, configure the sample to use the client id and redirectURI that you registered by adding the corresponding values for these keys in the Application.Resources node of the App.xaml file.
+1. After you've loaded the solution in Visual Studio, configure the sample to use the application (client) id and redirectURI that you registered by adding the corresponding values for these keys in the Application.Resources node of the App.xaml file.
 ![Office 365 UWP Microsoft Graph connect sample](/readme-images/appId_and_redirectURI.png "Client ID value in App.xaml file")`
 
 2. Press F5 to build and debug. Run the solution and sign in with either your personal or work or school account.
