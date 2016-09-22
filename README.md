@@ -50,25 +50,26 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 <a name="register"></a>
 ##Register and configure the app
 
-1.	Sign in to the [Azure Management Portal](http://aka.ms/i5b8dz) using your Azure AD credentials.
-2.	Click **Active Directory** on the left menu, then select the directory for your Office 365 developer site.
-3.	On the top menu, click **Applications**.
-4.	Click **Add** from the bottom menu.
-5.	On the **What do you want to do page**, click **Add an application my organization is developing**.
-6.	On the **Tell us about your application page**, select **NATIVE CLIENT APPLICATION** for type and specify a name for the app, for example **O365-UWP-Connect**.
-7.	Click the arrow icon on the lower-right corner of the page.
-8.	On the **Application information** page, enter the redirect URI value that you obtained during the previous step.
-9.	Once the application is successfully added, you'll be taken to the **Quick Start** page for the application. From there, select **Configure** in the top menu.
-10.	Under **permissions to other applications**, select **Add application**. In the dialog box, select the **Microsoft Graph** application. After you return to the application configuration page, select the **Send mail as a user** and **Sign in and read user profile** permissions.
-11.	Copy the value specified for **Client ID** on the **Configure** page.
-12.	Click **Save** in the bottom menu.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+2. On the top bar, click on your account and under the **Directory** list, choose the Active Directory tenant where you wish to register your application.
+3. Click on **More Services** in the left hand nav, and choose **Azure Active Directory**.
+4. Click on **App registrations** and choose **Add**.
+5. Enter a friendly name for the application, select **Native** as the Application Type. For the **Redirect URI**, enter the redirect URI value that you obtained during the previous step. Click on **Create** to create the application.
+6. While still in the Azure portal, choose your application, click on **Settings** and choose **Properties**.
+7. Find the **Application ID** value and copy it to the clipboard. This is the client ID value we'll add to the project later.
+8. Configure **Permissions** for your application - in the **Settings** menu, choose the **Required permissions** section, click on **Add**, then **Select an API**, and type "Microsoft Graph" in the text box. Then, click on **Select Permissions** and select:
+   * Send mail as user
+   * Sign in and read user profile
+ 
+9. Click **Select**.
+
 
 <a name="build"></a>
 ## Build and debug ##
 
 **Note:** If you see any errors while installing packages during step 2, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
-1. After you've loaded the solution in Visual Studio, configure the sample to use the client id that you registered in Azure Active Directory and the domain of your tenant by adding the corresponding values for these keys in the Application.Resources node of the App.xaml file.
+1. After you've loaded the solution in Visual Studio, configure the sample to use the application (client) id that you registered in Azure Active Directory and the domain of your tenant by adding the corresponding values for these keys in the Application.Resources node of the App.xaml file.
 ![Office 365 UWP Microsoft Graph connect sample](/readme-images/ClientTenant.png "Client ID value in App.xaml file")`
 
 2. Press F5 to build and debug. Run the solution and sign in to Office 365 with your organizational account.
