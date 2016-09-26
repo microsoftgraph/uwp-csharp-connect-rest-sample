@@ -52,7 +52,7 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 2. On the top bar, click on your account and under the **Directory** list, choose the Active Directory tenant where you wish to register your application.
 3. Click on **More Services** in the left hand nav, and choose **Azure Active Directory**.
 4. Click on **App registrations** and choose **Add**.
-5. Enter a friendly name for the application, select **Native** as the Application Type. For the **Redirect URI**, enter the redirect URI value that you obtained during the previous step. Click on **Create** to create the application.
+5. Enter a friendly name for the application. Select **Native** as the Application Type. For the **Redirect URI**, enter the redirect URI value that you obtained during the previous step. Click on **Create** to create the application.
 6. While still in the Azure portal, choose your application, click on **Settings** and choose **Properties**.
 7. Find the **Application ID** value and copy it to the clipboard. This is the client ID value we'll add to the project later.
 8. Configure **Permissions** for your application - in the **Settings** menu, choose the **Required permissions** section, click on **Add**, then **Select an API**, and type "Microsoft Graph" in the text box. Then, click on **Select Permissions** and select:
