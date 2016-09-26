@@ -18,8 +18,6 @@ This sample shows how to connect your Windows 10 Universal app to Office 365 usi
 <a name="prerequisites"></a>
 ## Prerequisites ##
 
-**Note:** Try out the [Get started with Office 365 APIs](http://dev.office.com/getting-started/office365apis?platform=option-windowsuniversal#setup) page, which simplifies registration so you can get this sample running faster.
-
 This sample requires the following:  
 
   * Visual Studio 2015 
