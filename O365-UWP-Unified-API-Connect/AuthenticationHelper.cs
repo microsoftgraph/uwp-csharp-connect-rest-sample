@@ -17,7 +17,7 @@ namespace O365_UWP_Unified_API_Connect
     {
         // The Client ID is used by the application to uniquely identify itself to the v2.0 authentication endpoint.
         static string clientId = App.Current.Resources["ida:ClientID"].ToString();
-        public static string[] Scopes = { "https://graph.microsoft.com/User.Read", "https://graph.microsoft.com/Mail.Send" };
+        public static string[] Scopes = { "User.Read", "Mail.Send", "Files.ReadWrite" };
 
         public static PublicClientApplication IdentityClientApp = new PublicClientApplication(clientId);
 
