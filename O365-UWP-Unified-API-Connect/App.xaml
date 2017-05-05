@@ -9,7 +9,7 @@
 
     <Application.Resources>
         <!-- Add your client id here. -->
-        <x:String x:Key="ida:ClientID">5106b04a-0218-4ef2-b676-ca70ce4a15dc</x:String>
+        <x:String x:Key="ida:ClientID">ENTER_YOUR_CLIENT_ID</x:String>
         <x:String x:Key="ida:ReturnUrl">urn:ietf:wg:oauth:2.0:oob</x:String>
     </Application.Resources>
 
