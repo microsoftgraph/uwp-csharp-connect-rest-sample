@@ -29,15 +29,13 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.0.304142221-alpha": {
+      "Microsoft.Identity.Client/1.1.0-preview": {
         "type": "package",
         "compile": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/1.6.1": {
@@ -2490,15 +2488,13 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.0.304142221-alpha": {
+      "Microsoft.Identity.Client/1.1.0-preview": {
         "type": "package",
         "compile": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/1.6.1": {
@@ -4981,15 +4977,13 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.0.304142221-alpha": {
+      "Microsoft.Identity.Client/1.1.0-preview": {
         "type": "package",
         "compile": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/1.6.1": {
@@ -7511,15 +7505,13 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.0.304142221-alpha": {
+      "Microsoft.Identity.Client/1.1.0-preview": {
         "type": "package",
         "compile": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/1.6.1": {
@@ -10011,15 +10003,13 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.0.304142221-alpha": {
+      "Microsoft.Identity.Client/1.1.0-preview": {
         "type": "package",
         "compile": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/1.6.1": {
@@ -12550,15 +12540,13 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.0.304142221-alpha": {
+      "Microsoft.Identity.Client/1.1.0-preview": {
         "type": "package",
         "compile": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/1.6.1": {
@@ -15050,15 +15038,13 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.0.304142221-alpha": {
+      "Microsoft.Identity.Client/1.1.0-preview": {
         "type": "package",
         "compile": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         },
         "runtime": {
-          "lib/netcore45/Microsoft.Identity.Client.Platform.dll": {},
-          "lib/netcore45/Microsoft.Identity.Client.dll": {}
+          "lib/win81/Microsoft.Identity.Client.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/1.6.1": {
@@ -17620,34 +17606,25 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.Identity.Client/1.0.304142221-alpha": {
-      "sha512": "T4kd4b5IFxWDOaGdYi5ipnj6kSAV3Ym4dj6lxVmWQ6lMoAdOBgiMT4K+LAG/G+14GFK2pbO75XgwJbgT3ol6eg==",
+    "Microsoft.Identity.Client/1.1.0-preview": {
+      "sha512": "LM/xTx2B87kzOyvoHmMAJG0wPjEIRadvQ+hLj200/eKsQvqecaxh1R4fwWH711zObPxzr1iLzdDWoEYi46uqpg==",
       "type": "package",
-      "path": "microsoft.identity.client/1.0.304142221-alpha",
+      "path": "microsoft.identity.client/1.1.0-preview",
       "files": [
-        "lib/MonoAndroid10/Microsoft.Identity.Client.Platform.dll",
-        "lib/MonoAndroid10/Microsoft.Identity.Client.Platform.xml",
-        "lib/MonoAndroid10/Microsoft.Identity.Client.dll",
-        "lib/MonoAndroid10/Microsoft.Identity.Client.xml",
-        "lib/Xamarin.iOS10/Microsoft.Identity.Client.Platform.dll",
-        "lib/Xamarin.iOS10/Microsoft.Identity.Client.Platform.xml",
-        "lib/Xamarin.iOS10/Microsoft.Identity.Client.dll",
-        "lib/Xamarin.iOS10/Microsoft.Identity.Client.xml",
-        "lib/dnxcore50/Microsoft.Identity.Client.Platform.dll",
-        "lib/dnxcore50/Microsoft.Identity.Client.Platform.xml",
-        "lib/dnxcore50/Microsoft.Identity.Client.dll",
-        "lib/dnxcore50/Microsoft.Identity.Client.xml",
-        "lib/net45/Microsoft.Identity.Client.Platform.dll",
-        "lib/net45/Microsoft.Identity.Client.Platform.xml",
+        "lib/monoandroid70/Microsoft.Identity.Client.dll",
+        "lib/monoandroid70/Microsoft.Identity.Client.xml",
         "lib/net45/Microsoft.Identity.Client.dll",
         "lib/net45/Microsoft.Identity.Client.xml",
-        "lib/netcore45/Microsoft.Identity.Client.Platform.dll",
-        "lib/netcore45/Microsoft.Identity.Client.Platform.xml",
-        "lib/netcore45/Microsoft.Identity.Client.dll",
-        "lib/netcore45/Microsoft.Identity.Client.xml",
-        "lib/portable-net45+win/Microsoft.Identity.Client.dll",
-        "lib/portable-net45+win/Microsoft.Identity.Client.xml",
-        "microsoft.identity.client.1.0.304142221-alpha.nupkg.sha512",
+        "lib/netstandard1.1/Microsoft.Identity.Client.dll",
+        "lib/netstandard1.1/Microsoft.Identity.Client.xml",
+        "lib/netstandard1.3/Microsoft.Identity.Client.dll",
+        "lib/netstandard1.3/Microsoft.Identity.Client.xml",
+        "lib/win81/Microsoft.Identity.Client.dll",
+        "lib/win81/Microsoft.Identity.Client.pri",
+        "lib/win81/Microsoft.Identity.Client.xml",
+        "lib/xamarinios10/Microsoft.Identity.Client.dll",
+        "lib/xamarinios10/Microsoft.Identity.Client.xml",
+        "microsoft.identity.client.1.1.0-preview.nupkg.sha512",
         "microsoft.identity.client.nuspec"
       ]
     },
@@ -26315,7 +26292,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.Identity.Client >= 1.0.304142221-alpha",
+      "Microsoft.Identity.Client >= 1.1.0-preview",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.3.2",
       "Newtonsoft.Json >= 10.0.2"
     ],
@@ -26326,14 +26303,14 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\jamescro\\Documents\\buildconnect\\uwp-csharp-connect-rest-sample\\O365-UWP-Unified-API-Connect\\O365-UWP-Unified-API-Connect.csproj",
+      "projectUniqueName": "C:\\Users\\jamescro\\Documents\\msal\\uwp-csharp-connect-rest-sample\\O365-UWP-Unified-API-Connect\\O365-UWP-Unified-API-Connect.csproj",
       "projectName": "O365-UWP-Unified-API-Connect",
-      "projectPath": "C:\\Users\\jamescro\\Documents\\buildconnect\\uwp-csharp-connect-rest-sample\\O365-UWP-Unified-API-Connect\\O365-UWP-Unified-API-Connect.csproj",
-      "projectJsonPath": "C:\\Users\\jamescro\\Documents\\buildconnect\\uwp-csharp-connect-rest-sample\\O365-UWP-Unified-API-Connect\\project.json",
+      "projectPath": "C:\\Users\\jamescro\\Documents\\msal\\uwp-csharp-connect-rest-sample\\O365-UWP-Unified-API-Connect\\O365-UWP-Unified-API-Connect.csproj",
+      "projectJsonPath": "C:\\Users\\jamescro\\Documents\\msal\\uwp-csharp-connect-rest-sample\\O365-UWP-Unified-API-Connect\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
-      "Microsoft.Identity.Client": "1.0.304142221-alpha",
+      "Microsoft.Identity.Client": "[1.1.0-preview, )",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.2",
       "Newtonsoft.Json": "10.0.2"
     },

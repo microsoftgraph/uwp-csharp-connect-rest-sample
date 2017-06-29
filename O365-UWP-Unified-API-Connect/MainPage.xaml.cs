@@ -63,7 +63,6 @@ namespace O365_UWP_Unified_API_Connect
 
             if (token != null)
             {
-                string userId = (string)_settings.Values["userID"];
                 _mailAddress = (string)_settings.Values["userEmail"];
                 _displayName = (string)_settings.Values["userName"];
                 return true;
