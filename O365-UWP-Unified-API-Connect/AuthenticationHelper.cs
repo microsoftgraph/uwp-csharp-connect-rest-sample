@@ -34,10 +34,9 @@ namespace O365_UWP_Unified_API_Connect
             AuthenticationResult authResult;
             try
             {
-                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes);
-                TokenForUser = authResult.Token;
+                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes, IdentityClientApp.Users.First());
+                TokenForUser = authResult.AccessToken;
                 // save user ID in local storage
-                _settings.Values["userID"] = authResult.User.UniqueId;
                 _settings.Values["userEmail"] = authResult.User.DisplayableId;
                 _settings.Values["userName"] = authResult.User.Name;
             }
@@ -48,11 +47,10 @@ namespace O365_UWP_Unified_API_Connect
                 {
                     authResult = await IdentityClientApp.AcquireTokenAsync(Scopes);
 
-                    TokenForUser = authResult.Token;
+                    TokenForUser = authResult.AccessToken;
                     Expiration = authResult.ExpiresOn;
 
                     // save user ID in local storage
-                    _settings.Values["userID"] = authResult.User.UniqueId;
                     _settings.Values["userEmail"] = authResult.User.DisplayableId;
                     _settings.Values["userName"] = authResult.User.Name;
                 }
@@ -68,7 +66,7 @@ namespace O365_UWP_Unified_API_Connect
         {
             foreach (var user in IdentityClientApp.Users)
             {
-                user.SignOut();
+                IdentityClientApp.Remove(user);
             }
 
             TokenForUser = null;
