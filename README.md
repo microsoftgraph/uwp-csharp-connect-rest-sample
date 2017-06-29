@@ -18,7 +18,7 @@
 
 This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API to retrieve a user's profile picture, upload the picture to OneDrive, and send an email that contains the photo as an attachment and the sharing link in its text. The sample uses the Azure AD v2.0 endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
 
-> Note: To understand the code for calling Microsoft Graph in a UWP app, see [Call Microsoft Graph in a universal Windows 10 app] (https://graph.microsoft.io/docs/platform/uwp).
+> Note: To understand the code for calling Microsoft Graph in a UWP app, see [Get started with Microsoft Graph in a universal Windows 10 app](https://developer.microsoft.com/en-us/graph/docs/concepts/uwp).
 
 
 <a name="prerequisites"></a>
